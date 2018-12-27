@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Navbar from './components/Navbar.js';
+import Navbar from './components/layout/Navbar.js';
 
 class App extends Component {
   render() {
