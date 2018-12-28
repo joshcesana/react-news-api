@@ -5,8 +5,7 @@
   "devDependencies": {
     "jsdom": "^9.9.1",
     "mocha": "^5.2.0",
-    "react-scripts": "1.1.4",
-    "webpack": "^3.6.0",
+    "react-scripts": "^1.1.4",
     "webpack-dev-server": "^2.9.2"
   },
   "dependencies": {
@@ -25,7 +24,6 @@
     "react-dom": "^16.7.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.2",
     "redux": "^4.0.0",
     "sinon": "^6.1.4"
   },
