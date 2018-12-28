@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar.js';
 import SearchContainer from './containers/SearchContainer';
 import SavesContainer from './containers/SavesContainer';
-import NewsContainer from './containers/NewsContainer';
+import ArticlesContainer from './containers/ArticlesContainer';
 
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
           <Navbar />
           <div className="container">
             <Route exact path="/" component={SearchContainer} />
-            <Route path="/news" component={NewsContainer} />
+            <Route path="/news" component={ArticlesContainer} />
             <Route path="/saves" component={SavesContainer} />
           </div>
         </div>
