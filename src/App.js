@@ -12,9 +12,11 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar />
-          <Route exact path="/" component={SearchContainer} />
-          <Route exact path="/news" component={NewsContainer} />
-          <Route exact path="/saves" component={SavesContainer} />
+          <div className="container">
+            <Route exact path="/" component={SearchContainer} />
+            <Route path="/news" component={NewsContainer} />
+            <Route path="/saves" component={SavesContainer} />
+          </div>
         </div>
       </BrowserRouter>
     );
