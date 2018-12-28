@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar.js';
-import SearchContainer from './components/containers/SearchContainer';
-import SavesContainer from './components/containers/SavesContainer';
-import NewsContainer from './components/containers/NewsContainer';
+import SearchContainer from './containers/SearchContainer';
+import SavesContainer from './containers/SavesContainer';
+import NewsContainer from './containers/NewsContainer';
 
 
 class App extends Component {
