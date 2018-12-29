@@ -1,7 +1,6 @@
 class Save < ApplicationRecord
   validates :article_id,
             :source,
-            :author,
             :title,
             :description,
             :url,
