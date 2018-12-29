@@ -2,9 +2,8 @@ module Api
   module V1
     class SavesController < ApplicationController
       def index
-        saves = Save.order('created_at DESC');
+        saves = Save.order('created_at ASC');
         render json: {status: 'SUCCESS', message:'Loaded saves', data:saves}, status: :ok
-        # render json: saves
       end
 
       def show
