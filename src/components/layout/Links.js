@@ -10,7 +10,7 @@ const Links = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to='/'>
+        <NavLink to='/saves'>
           <i className="material-icons">favorite_border</i>
         </NavLink>
       </li>
