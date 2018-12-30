@@ -38,7 +38,7 @@ class ArticlesContainer extends Component {
     console.log('this.state.articles', this.state.articles);
     return (
       <div>
-        <p>ArticlesContainer</p>
+        <br />
         <Articles articles={this.state.articles}/>
       </div>
     )
