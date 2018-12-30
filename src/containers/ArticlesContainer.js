@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Articles from '../components/Articles';
+import ArticleList from '../components/ArticleList';
 import axios from 'axios';
 import dummy_articles from '../dummy_data/dummy_articles';
 
@@ -39,7 +39,7 @@ class ArticlesContainer extends Component {
     return (
       <div>
         <br />
-        <Articles articles={this.state.articles}/>
+        <ArticleList articles={this.state.articles}/>
       </div>
     )
   }
