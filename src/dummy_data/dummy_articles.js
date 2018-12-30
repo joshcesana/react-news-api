@@ -21,7 +21,7 @@ let dummy_articles = [
       "title": "Amanda Nunes vs Cris Cyborg | WEIGH-INS | UFC 232 - UFC ON FOX",
       "description": null,
       "url": "https://www.youtube.com/watch?v=65jfYVFBG7o",
-      "urlToImage": null,
+      "urlToImage": "https://i.imgur.com/BrNrxRt.gif",
       "publishedAt": "2018-12-29T01:19:00Z",
       "content": "[[getSimpleString(data.title)]] [[getSimpleString(data.description)]] [[getSimpleString(data.videoCountText)]]"
   },
@@ -47,7 +47,7 @@ let dummy_articles = [
       "title": "NASA's New Horizons spacecraft heads for New Year's encounter with distant world - Spaceflight Now",
       "description": null,
       "url": "https://spaceflightnow.com/2018/12/28/nasas-new-horizons-spacecraft-heads-for-new-years-encounter-with-distant-world/",
-      "urlToImage": null,
+      "urlToImage": "https://i.imgur.com/BrNrxRt.gif",
       "publishedAt": "2018-12-29T00:24:21Z",
       "content": "STORY WRITTEN FOR CBS NEWS &amp; USED WITH PERMISSION Artist’s concept of the New Horizons spacecraft approaching a Kuiper Belt Object. Credit: NASA/JHUAPL/SWRI Three years and a billion miles past Pluto, NASA’s New Horizons probe is on the verge of at least … [+12723 chars]"
   },
