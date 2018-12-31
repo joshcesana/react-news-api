@@ -18,7 +18,9 @@ const CardImage = props => {
   return (
     <div className="card-image">
       <a href={props.article.url} target="_blank"><img src={props.article.urlToImage} alt="" /></a>
-      <a className="btn-floating halfway-fab waves-effect waves-light white"><i className="material-icons md-dark">favorite_border</i></a>
+      <a className="btn-floating halfway-fab waves-effect waves-light white">
+        <i className="material-icons md-dark" onClick={handleOnClick}>favorite_border</i>
+      </a>
     </div>
   )
 }
@@ -34,7 +36,10 @@ const CardContent = props => {
       <p>{props.article.description}</p>
     </div>
   )
+}
 
+const handleOnClick = () => {
+  console.log("clicked!");
 }
 
 export default Article;
