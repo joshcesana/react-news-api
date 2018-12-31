@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ArticleList from '../components/ArticleList';
+import ArticleList from '../components/article/ArticleList';
 import axios from 'axios';
 import { connect } from 'react-redux';
 
@@ -25,11 +25,10 @@ class ArticlesContainer extends Component {
   }
 
   render() {
-    console.log('ArticlesContainer props:', this.props);
     return (
       <div>
         <br />
-        <ArticleList articles={this.props.articles}/>
+        <ArticleList articles={this.props.articles} addSave={this.props.addSave} />
       </div>
     )
   }
@@ -39,7 +38,10 @@ const mapStateToProps = (state) => {
   return ({
     articles: state.articles
   })
-
 }
 
-export default connect(mapStateToProps)(ArticlesContainer);
+const mapDispatchToProps = (dispatch) => ({
+  addSave: save => dispatch({ type: 'ADD_SAVE', save})
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(ArticlesContainer);
