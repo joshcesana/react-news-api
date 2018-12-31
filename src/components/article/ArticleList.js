@@ -17,7 +17,7 @@ const Articles = (props) => {
 
   return (
     <div>
-      {rows.map((row, i) => <ArticleRow key={i} row={row} />)}
+      {rows.map((row, i) => <ArticleRow key={i} row={row} addSave={props.addSave} />)}
     </div>
   )
 }
