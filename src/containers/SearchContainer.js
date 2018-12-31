@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import SearchForm from '../components/SearchForm';
 import axios from 'axios';
 import { connect } from 'react-redux';
+
 
 class SearchContainer extends Component {
 
@@ -27,7 +29,7 @@ class SearchContainer extends Component {
   render() {
     return (
       <div>
-        <h1>SearchContainer</h1>
+        <SearchForm />
       </div>
     )
   }
