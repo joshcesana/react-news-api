@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ArticleList from '../components/ArticleList';
+import ArticleList from '../components/article/ArticleList';
 import { connect } from 'react-redux';
 
 class SavesContainer extends Component {
