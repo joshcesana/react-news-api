@@ -21,14 +21,15 @@ const CardImage = props => {
       <a className="btn-floating halfway-fab waves-effect waves-light white"><i className="material-icons md-dark">favorite_border</i></a>
     </div>
   )
-
 }
 
 const CardContent = props => {
+  const author = (props.article.author) ? `By: ${props.article.author}` : "";
+
   return (
     <div className="card-content">
       <p><strong>{props.article.title}</strong></p>
-      <p>By: {props.article.author}</p>
+      <p>{author}</p>
       <p>{dateformat(props.article.publishedAt, "mmmm d, yyyy h:MM:ss TT")}</p>
       <p>{props.article.description}</p>
     </div>
