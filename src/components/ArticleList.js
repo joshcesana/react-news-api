@@ -3,7 +3,6 @@ import ArticleRow from './ArticleRow';
 
 
 const Articles = (props) => {
-
   const rows = props.articles.reduce((resultArray, item, index) => {
     const chunkIndex = Math.floor(index/3) // 3 articles per row
 

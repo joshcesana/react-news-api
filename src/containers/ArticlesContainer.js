@@ -4,7 +4,6 @@ import axios from 'axios';
 import dummy_articles from '../dummy_data/dummy_articles';
 
 class ArticlesContainer extends Component {
-
   // state = {
   //   articles: []
   // }
@@ -31,8 +30,6 @@ class ArticlesContainer extends Component {
     //   console.log('get error:', error);
     // })
   }
-
-
 
   render() {
     console.log('this.state.articles', this.state.articles);
