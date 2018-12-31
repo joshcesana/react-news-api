@@ -40,7 +40,7 @@ module Api
       private
 
       def save_params
-        params.permit(:article_id, :source, :author, :title, :description, :url, :image_url, :publish_date)
+        params.permit(:author, :title, :description, :url, :urlToImage, :publishedAt, :source)
       end
     end
   end
