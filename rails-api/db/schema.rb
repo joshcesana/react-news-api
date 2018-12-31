@@ -10,17 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_29_035245) do
+ActiveRecord::Schema.define(version: 2018_12_31_014816) do
 
   create_table "saves", force: :cascade do |t|
-    t.string "article_id"
     t.string "source"
     t.string "author"
     t.string "title"
     t.string "description"
     t.string "url"
-    t.string "image_url"
-    t.date "publish_date"
+    t.string "urlToImage"
+    t.date "publishedAt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
