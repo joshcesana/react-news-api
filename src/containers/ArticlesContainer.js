@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/ArticleList';
 import axios from 'axios';
-import dummy_articles from '../dummy_data/dummy_articles';
+import { connect } from 'react-redux';
 
 class ArticlesContainer extends Component {
-  // state = {
-  //   articles: []
-  // }
-
-  state = {
-    articles: dummy_articles
-  }
 
   componentDidMount() {
     // axios.get(process.env.REACT_APP_API_URL, {
@@ -32,14 +25,21 @@ class ArticlesContainer extends Component {
   }
 
   render() {
-    console.log('this.state.articles', this.state.articles);
+    console.log('ArticlesContainer props:', this.props);
     return (
       <div>
         <br />
-        <ArticleList articles={this.state.articles}/>
+        <ArticleList articles={this.props.articles}/>
       </div>
     )
   }
 }
 
-export default ArticlesContainer;
+const mapStateToProps = (state) => {
+  return ({
+    articles: state.articles
+  })
+
+}
+
+export default connect(mapStateToProps)(ArticlesContainer);
