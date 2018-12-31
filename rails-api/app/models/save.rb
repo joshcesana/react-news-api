@@ -1,10 +1,9 @@
 class Save < ApplicationRecord
-  validates :article_id,
-            :source,
+  validates :source,
             :title,
             :description,
             :url,
-            :image_url,
-            :publish_date,
+            :urlToImage,
+            :publishedAt,
             presence: true
 end
