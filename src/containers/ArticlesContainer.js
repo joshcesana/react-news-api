@@ -36,7 +36,7 @@ class ArticlesContainer extends Component {
 
 const mapStateToProps = (state) => {
   return ({
-    articles: state.articles
+    articles: state.articles.feed
   })
 }
 
