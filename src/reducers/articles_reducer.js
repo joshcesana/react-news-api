@@ -19,6 +19,14 @@ const articles_reducer = (state = initState, action) => {
       console.log('FETCH_NEWS...', { ...state, feed: action.articles.data.articles, loading: false })
       return { ...state, feed: action.articles.data.articles, loading: false }
 
+    case 'LOADING_SEARCH':
+      console.log('LOADING_SEARCH...', { ...state, loading: true })
+      return { ...state, loading: true }
+
+    case 'FETCH_SEARCH':
+      console.log('FETCH_SEARCH...', { ...state, feed: action.articles.data.articles, loading: false })
+      return { ...state, feed: action.articles.data.articles, loading: false }
+
     case 'ADD_SAVE':
       const save = {
         source: action.save.source.name,
