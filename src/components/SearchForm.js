@@ -12,10 +12,14 @@ class SearchForm extends Component {
     })
   }
 
+  handleOnSubmit = (event) => {
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div className="row">
-        <form className="col s12">
+        <form className="col s12" onSubmit={ (event) => this.handleOnSubmit(event) }>
           <div className="row">
             <div className="input-field col s6 push-s3 l4 push-l4">
               <input id="search"
@@ -24,7 +28,8 @@ class SearchForm extends Component {
                      placeholder="Search"
                      type="text"
                      className="validate"
-                     onChange={this.handleChange} />
+                     onChange={this.handleChange}
+              />
             </div>
           </div>
         </form>
