@@ -5,7 +5,7 @@ const Links = () => {
   return (
     <ul className="right">
       <li>
-        <NavLink to='/'>
+        <NavLink to='/search'>
           <i className="material-icons">search</i>
         </NavLink>
       </li>
