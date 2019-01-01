@@ -17,6 +17,12 @@ code {
   padding: .5em 0 0 0;
 }
 
+.search-stats {
+  margin-bottom: 3em;
+}
+.search-row {
+  margin-bottom: 0;
+}
 .material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
 .material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
 
