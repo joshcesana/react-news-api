@@ -26,21 +26,16 @@ export function fetchNews() {
 }
 
 export function fetchSearch(query) {
-  axios.get(process.env.REACT_APP_API_URL, {
-    params: {
-      country: process.env.REACT_APP_API_COUNTRY,
-      category: process.env.REACT_APP_API_CATEGORY,
-      q: query,
-      apiKey: process.env.REACT_APP_API_KEY
-    }
-  })
-  .then(response => {
-    console.log('response:', response);
-    this.setState({
-      articles: response.data.articles
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_SEARCH' });
+    axios.get(process.env.REACT_APP_API_URL, {
+      params: {
+        country: process.env.REACT_APP_API_COUNTRY,
+        category: process.env.REACT_APP_API_CATEGORY,
+        q: query,
+        apiKey: process.env.REACT_APP_API_KEY
+      }
     })
-  })
-  .catch(error => {
-    console.log('get error:', error);
-  })
+    .then(articles => dispatch({ type: 'FETCH_SEARCH', articles }));
+  }
 }
