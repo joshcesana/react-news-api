@@ -1,10 +1,11 @@
-import dummy_data from './dummy_data';
 import cuid from 'cuid';
 export const cuidFn = cuid;
 
 const initState = {
   saves: [],
   feed: [],
+  numberOfSearchResults: 0,
+  searchQuery: '',
   loading: false
 }
 
@@ -25,7 +26,12 @@ const articles_reducer = (state = initState, action) => {
 
     case 'FETCH_SEARCH':
       console.log('FETCH_SEARCH...', { ...state, feed: action.articles.data.articles, loading: false })
-      return { ...state, feed: action.articles.data.articles, loading: false }
+      return { ...state,
+                  feed: action.articles.data.articles,
+                  numberOfSearchResults: action.articles.data.articles.length,
+                  searchQuery: action.searchQuery,
+                  loading: false
+             }
 
     case 'ADD_SAVE':
       const save = {
@@ -42,6 +48,9 @@ const articles_reducer = (state = initState, action) => {
       console.log('ADD SAVE...', { ...state, saves: state.saves.concat(save) })
       return { ...state, saves: state.saves.concat(save) };
 
+    case 'CLEAR_FEED':
+      console.log('CLEAR_FEED', { ...state, feed: [], numberOfSearchResults: 0, searchQuery: '', loading: false } )
+      return { ...state, feed: [], numberOfSearchResults: 0, searchQuery: '', loading: false }
     default:
       return state;
   }
