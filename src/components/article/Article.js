@@ -6,7 +6,7 @@ import CardContent from './CardContent';
 const Article = props => {
   if (props.article) {
     return (
-      <div className="card">
+      <div className="card hoverable">
         <CardImage article={props.article} addSave={props.addSave} />
         <CardContent article={props.article} />
       </div>
