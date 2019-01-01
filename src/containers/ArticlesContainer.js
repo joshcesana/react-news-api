@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/article/ArticleList';
 import { connect } from 'react-redux';
+import { fetchNews } from '../actions/articlesActions';
 
 class ArticlesContainer extends Component {
 
   componentDidMount() {
-    // fetchNews() goes here ?
+    this.props.fetchNews();
   }
 
   render() {
@@ -19,13 +20,15 @@ class ArticlesContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log('STATE...', state.articles.feed)
   return ({
     articles: state.articles.feed
   })
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addSave: save => dispatch({ type: 'ADD_SAVE', save})
+  addSave: save => dispatch({ type: 'ADD_SAVE', save}),
+  fetchNews: () => dispatch(fetchNews())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArticlesContainer);
