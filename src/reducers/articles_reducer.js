@@ -4,11 +4,21 @@ export const cuidFn = cuid;
 
 const initState = {
   saves: [],
-  feed: dummy_data
+  feed: [],
+  loading: false
 }
 
 const articles_reducer = (state = initState, action) => {
   switch(action.type) {
+
+    case 'LOADING_NEWS':
+      console.log('LOADING_NEWS...', { ...state, loading: true })
+      return { ...state, loading: true }
+
+    case 'FETCH_NEWS':
+      console.log('FETCH_NEWS...', { ...state, feed: action.articles.data.articles, loading: false })
+      return { ...state, feed: action.articles.data.articles, loading: false }
+
     case 'ADD_SAVE':
       const save = {
         source: action.save.source.name,
