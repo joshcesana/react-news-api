@@ -24,7 +24,7 @@ class SearchForm extends Component {
     return (
       <div className="row">
         <form className="col s12" onSubmit={ (event) => this.handleOnSubmit(event) }>
-          <div className="row">
+          <div className="row search-row">
             <div className="input-field col s6 push-s3 l4 push-l4">
               <input id="search"
                      name="search"
