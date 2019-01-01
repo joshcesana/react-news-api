@@ -1,8 +1,8 @@
 import React from 'react';
 import ArticleRow from './ArticleRow';
 
+const ArticleList = (props) => {
 
-const Articles = (props) => {
   const rows = props.articles.reduce((resultArray, item, index) => {
     const chunkIndex = Math.floor(index/3) // 3 articles per row
 
@@ -22,4 +22,4 @@ const Articles = (props) => {
   )
 }
 
-export default Articles;
+export default ArticleList;
