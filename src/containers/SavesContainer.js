@@ -16,7 +16,7 @@ class SavesContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    articles: state.saves
+    articles: state.articles.saves
   }
 }
 
