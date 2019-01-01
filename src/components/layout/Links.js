@@ -1,12 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const Links = () => {
+
+const Links = (props) => {
   return (
     <ul className="right">
       <li>
         <NavLink to='/search'>
-          <i className="material-icons">search</i>
+          <i className="material-icons" onClick={props.clearFeed}>search</i>
         </NavLink>
       </li>
       <li>
@@ -18,4 +20,10 @@ const Links = () => {
   )
 }
 
-export default Links;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    clearFeed: () => dispatch({ type: 'CLEAR_FEED' })
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Links);
