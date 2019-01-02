@@ -12,6 +12,7 @@ class CardImage extends Component {
   }
 
   handleOnClick = () => {
+    debugger;
     this.props.addSave(this.props.article);
     this.makeHeartDark();
   }
@@ -23,7 +24,7 @@ class CardImage extends Component {
   }
 
   render() {
-    const image = (this.props.article.urlToImage) ? this.props.article.urlToImage : "https://i.imgur.com/BrNrxRt.gif"
+    const image = (this.props.article.urlToImage) ? this.props.article.urlToImage : "http://whatsupnewp.com/wp-content/uploads/2016/06/maxresdefault-768x432.jpg"
     return (
       <div className="card-image">
         <a href={this.props.article.url} target="_blank"><img src={image} alt="" /></a>
