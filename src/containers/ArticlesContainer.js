@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/article/ArticleList';
 import { connect } from 'react-redux';
-import { fetchNews } from '../actions/articlesActions';
+import { addSave, fetchNews } from '../actions/articlesActions';
 
 class ArticlesContainer extends Component {
 
@@ -27,7 +27,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addSave: save => dispatch({ type: 'ADD_SAVE', save}),
+  addSave: save => dispatch(addSave(save)),
   fetchNews: () => dispatch(fetchNews())
 })
 
