@@ -49,3 +49,28 @@ export function fetchSearch(query) {
   //   .then(articles => dispatch({ type: 'FETCH_SEARCH', articles: articles, searchQuery: query }));
   // }
 }
+
+export function fetchSaves() {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_SAVES' });
+    axios.get('/api/v1/saves')
+      .then(saves => dispatch({ type: 'FETCH_SAVES', saves }))
+  }
+}
+
+export function addSave(save) {
+  debugger;
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_SAVE' });
+    axios.post('/api/v1/saves', {
+      source: save.source.name,
+    	author: save.author,
+    	title: save.title,
+    	description: save.description,
+    	url: save.url,
+    	urlToImage: save.urlToImage,
+    	publishedAt: save.publishedAt,
+    })
+    .then(save => dispatch({ type: 'ADD_SAVE', save }))
+  }
+}
