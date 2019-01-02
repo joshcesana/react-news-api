@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CardImage extends Component {
+class ArticleImage extends Component {
   state = {
     favorite_icon: "favorite_border"
   }
@@ -36,4 +36,4 @@ class CardImage extends Component {
   }
 }
 
-export default CardImage;
+export default ArticleImage;
