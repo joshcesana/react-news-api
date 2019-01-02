@@ -1,7 +1,7 @@
 import React from 'react';
 import dateformat from 'dateformat';
 
-const CardContent = props => {
+const ArticleContent = props => {
   const author = (props.article.author) ? `By: ${props.article.author}` : "";
 
   return (
@@ -14,4 +14,4 @@ const CardContent = props => {
   )
 }
 
-export default CardContent;
+export default ArticleContent;
