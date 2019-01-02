@@ -55,13 +55,13 @@ const articles_reducer = (state = initState, action) => {
     case 'ADD_SAVE':
       debugger;
       const save = {
-        source: action.save.source.name,
-        author: action.save.author,
-        title: action.save.title,
-        description: action.save.description,
-        url: action.save.url,
-        urlToImage: action.save.urlToImage,
-        publishedAt: action.save.publishedAt,
+        source: action.save.data.data.source,
+        author: action.save.data.data.author,
+        title: action.save.data.data.title,
+        description: action.save.data.data.description,
+        url: action.save.data.data.url,
+        urlToImage: action.save.data.data.urlToImage,
+        publishedAt: action.save.data.data.publishedAt,
         isSaved: true,
         id: cuid()
       }
