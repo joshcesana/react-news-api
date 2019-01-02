@@ -23,9 +23,10 @@ class CardImage extends Component {
   }
 
   render() {
+    const image = (this.props.article.urlToImage) ? this.props.article.urlToImage : "https://i.imgur.com/BrNrxRt.gif"
     return (
       <div className="card-image">
-        <a href={this.props.article.url} target="_blank"><img src={this.props.article.urlToImage} alt="" /></a>
+        <a href={this.props.article.url} target="_blank"><img src={image} alt="" /></a>
         <a className="btn-floating halfway-fab waves-effect waves-light white">
           <i className="material-icons md-dark" onClick={this.handleOnClick}>{this.state.favorite_icon}</i>
         </a>
