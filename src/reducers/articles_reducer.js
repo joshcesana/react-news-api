@@ -33,7 +33,27 @@ const articles_reducer = (state = initState, action) => {
                   loading: false
              }
 
+    case 'CLEAR_FEED':
+      console.log('CLEAR_FEED', { ...state, feed: [], numberOfSearchResults: 0, searchQuery: '', loading: false } )
+      return { ...state, feed: [], numberOfSearchResults: 0, searchQuery: '', loading: false }
+
+    case 'LOADING_SAVES':
+      // debugger;
+      console.log('LOADING_SAVES...', { ...state, loading: true })
+      return { ...state, loading: true }
+
+    case 'FETCH_SAVES':
+      // debugger;
+      console.log('FETCH_SAVES...', { ...state, saves: action.saves.data.data, loading: false }  )
+      return { ...state, saves: action.saves.data.data, loading: false }
+
+    case 'LOADING_SAVE':
+      debugger;
+      console.log('LOADING_SAVE...', { ...state, loading: true })
+      return { ...state, loading: true }
+
     case 'ADD_SAVE':
+      debugger;
       const save = {
         source: action.save.source.name,
         author: action.save.author,
@@ -48,9 +68,6 @@ const articles_reducer = (state = initState, action) => {
       console.log('ADD SAVE...', { ...state, saves: state.saves.concat(save) })
       return { ...state, saves: state.saves.concat(save) };
 
-    case 'CLEAR_FEED':
-      console.log('CLEAR_FEED', { ...state, feed: [], numberOfSearchResults: 0, searchQuery: '', loading: false } )
-      return { ...state, feed: [], numberOfSearchResults: 0, searchQuery: '', loading: false }
     default:
       return state;
   }
