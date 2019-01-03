@@ -2,7 +2,7 @@
 News is a news client that receives up to date news articles that allows searching and saving articles to read later.
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and uses a Rails API for saved stories.
 
-![news_screenshots](docs/screenshotsCollage.jpg)
+![news_screenshots](/screenshotsCollage.jpg)
 
 ## Usage
 To use this app
