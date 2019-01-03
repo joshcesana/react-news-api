@@ -2,7 +2,7 @@ import React from 'react';
 import ArticleRow from './ArticleRow';
 
 const ArticleList = (props) => {
-
+  
   const rows = props.articles.reduce((resultArray, item, index) => {
     const chunkIndex = Math.floor(index/3) // 3 articles per row
 
@@ -17,7 +17,7 @@ const ArticleList = (props) => {
 
   return (
     <div>
-      {rows.map((row, i) => <ArticleRow key={i} row={row} addSave={props.addSave} />)}
+      {rows.map((row, i) => <ArticleRow key={i} row={row} addSave={props.addSave} deleteSave={props.deleteSave} isSaved={props.isSaved} />)}
     </div>
   )
 }
