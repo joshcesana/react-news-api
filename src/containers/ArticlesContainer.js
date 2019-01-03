@@ -13,7 +13,7 @@ class ArticlesContainer extends Component {
     return (
       <div>
         <br />
-        <ArticleList articles={this.props.articles} addSave={this.props.addSave} />
+        <ArticleList articles={this.props.articles} addSave={this.props.addSave} isSaved={false} />
       </div>
     )
   }
