@@ -10,13 +10,13 @@ class ArticleRow extends Component {
     return (
       <div className="row">
         <div className="col s12 m6 l4">
-            <Article article={article1} addSave={this.props.addSave} />
+            <Article article={article1} addSave={this.props.addSave} deleteSave={this.props.deleteSave} isSaved={this.props.isSaved} />
         </div>
         <div className="col s12 m6 l4">
-            <Article article={article2} addSave={this.props.addSave} />
+            <Article article={article2} addSave={this.props.addSave} deleteSave={this.props.deleteSave} isSaved={this.props.isSaved} />
         </div>
         <div className="col s12 m6 l4">
-            <Article article={article3} addSave={this.props.addSave} />
+            <Article article={article3} addSave={this.props.addSave} deleteSave={this.props.deleteSave} isSaved={this.props.isSaved} />
         </div>
       </div>
     )
