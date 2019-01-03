@@ -6,15 +6,22 @@ class ArticleImage extends Component {
   }
 
   componentWillMount() {
-    if (this.props.article.isSaved) {
+    if (this.props.isSaved) {
       this.makeHeartDark();
     }
   }
 
-  handleOnClick = () => {
-    debugger;
-    this.props.addSave(this.props.article);
-    this.makeHeartDark();
+  handleOnClick = (event) => {
+    if (event.target.textContent === "favorite_border") {
+      // from not a 'Save' to 'Save'
+      this.props.addSave(this.props.article);
+      this.makeHeartDark();
+
+    } else {
+      // from 'Save' to not a 'Save'
+      this.props.deleteSave(this.props.article.id);
+    }
+
   }
 
   makeHeartDark = () => {
@@ -29,7 +36,7 @@ class ArticleImage extends Component {
       <div className="card-image">
         <a href={this.props.article.url} target="_blank"><img src={image} alt="" /></a>
         <a className="btn-floating halfway-fab waves-effect waves-light white">
-          <i className="material-icons md-dark" onClick={this.handleOnClick}>{this.state.favorite_icon}</i>
+          <i className="material-icons md-dark" onClick={(event) => this.handleOnClick(event)}>{this.state.favorite_icon}</i>
         </a>
       </div>
     )
