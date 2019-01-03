@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import ArticleList from '../components/article/ArticleList';
 import { connect } from 'react-redux';
-import { fetchSaves } from '../actions/articlesActions';
+import { fetchSaves, deleteSave } from '../actions/articlesActions';
 import axios from 'axios';
 
 class SavesContainer extends Component {
 
   componentDidMount() {
-    console.log("componentDidMount")
     this.props.fetchSaves();
   }
 
@@ -16,7 +15,7 @@ class SavesContainer extends Component {
     return (
       <div>
         <h1>Saves</h1>
-        <ArticleList articles={this.props.articles}/>
+        <ArticleList articles={this.props.articles} deleteSave={this.props.deleteSave} isSaved={true} />
       </div>
     )
   }
@@ -29,7 +28,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchSaves: () => dispatch(fetchSaves())
+  fetchSaves: () => dispatch(fetchSaves()),
+  deleteSave: id => dispatch(deleteSave(id)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SavesContainer);
