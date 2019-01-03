@@ -20,7 +20,7 @@ class ArticlesContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('STATE...', state.articles.feed)
+  console.log('STATE...', state)
   return ({
     articles: state.articles.feed
   })
