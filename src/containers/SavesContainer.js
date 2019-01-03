@@ -14,7 +14,9 @@ class SavesContainer extends Component {
     console.log('SavesContainer redux props:', this.props);
     return (
       <div>
-        <h1>Saves</h1>
+        <div className="center-align">
+        <i className="material-icons favorite-icon">favorite_border</i>
+        </div>
         <ArticleList articles={this.props.articles} deleteSave={this.props.deleteSave} isSaved={true} />
       </div>
     )
