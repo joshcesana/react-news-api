@@ -1,5 +1,5 @@
-import cuid from 'cuid';
-export const cuidFn = cuid;
+// import cuid from 'cuid';
+// export const cuidFn = cuid;
 
 const initState = {
   saves: [],
@@ -38,22 +38,18 @@ const articles_reducer = (state = initState, action) => {
       return { ...state, feed: [], numberOfSearchResults: 0, searchQuery: '', loading: false }
 
     case 'LOADING_SAVES':
-      // debugger;
       console.log('LOADING_SAVES...', { ...state, loading: true })
       return { ...state, loading: true }
 
     case 'FETCH_SAVES':
-      // debugger;
       console.log('FETCH_SAVES...', { ...state, saves: action.saves.data.data, loading: false }  )
       return { ...state, saves: action.saves.data.data, loading: false }
 
     case 'LOADING_SAVE':
-      debugger;
       console.log('LOADING_SAVE...', { ...state, loading: true })
       return { ...state, loading: true }
 
     case 'ADD_SAVE':
-      debugger;
       const save = {
         source: action.save.data.data.source,
         author: action.save.data.data.author,
@@ -61,12 +57,16 @@ const articles_reducer = (state = initState, action) => {
         description: action.save.data.data.description,
         url: action.save.data.data.url,
         urlToImage: action.save.data.data.urlToImage,
-        publishedAt: action.save.data.data.publishedAt,
-        isSaved: true,
-        id: cuid()
+        publishedAt: action.save.data.data.publishedAt
       }
       console.log('ADD SAVE...', { ...state, saves: state.saves.concat(save) })
       return { ...state, saves: state.saves.concat(save) };
+
+    case 'DELETE_SAVE':
+      const saves = state.saves.filter(save => save.id !== action.save.data.data.id)
+
+      console.log('DELETE_SAVE...', { ...state, saves })
+      return { ...state, saves }
 
     default:
       return state;
