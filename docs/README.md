@@ -26,4 +26,4 @@ Committing code is easy:
 * Send me a pull request for your changes to be included
 
 ## License
-[rehack-news](https://github.com/vlaunyc/rehack-news/blob/master/LICENSE) is licensed under the [MIT license](http://opensource.org/licenses/MIT).
+[News](https://github.com/JCesana/react-news-api/blob/master/LICENSE) is licensed under the [MIT license](http://opensource.org/licenses/MIT).
