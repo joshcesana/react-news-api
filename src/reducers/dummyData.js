@@ -22,7 +22,7 @@ const dummyData = {
         "title": "Amanda Nunes vs Cris Cyborg | WEIGH-INS | UFC 232 - UFC ON FOX",
         "description": null,
         "url": "https://www.youtube.com/watch?v=65jfYVFBG7o",
-        "urlToImage": "https://i.imgur.com/BrNrxRt.gif",
+        "urlToImage": "http://whatsupnewp.com/wp-content/uploads/2016/06/maxresdefault-768x432.jpg",
         "publishedAt": "2018-12-29T01:19:00Z",
         "content": "[[getSimpleString(data.title)]] [[getSimpleString(data.description)]] [[getSimpleString(data.videoCountText)]]"
     },
@@ -48,7 +48,7 @@ const dummyData = {
         "title": "NASA's New Horizons spacecraft heads for New Year's encounter with distant world - Spaceflight Now",
         "description": null,
         "url": "https://spaceflightnow.com/2018/12/28/nasas-new-horizons-spacecraft-heads-for-new-years-encounter-with-distant-world/",
-        "urlToImage": "https://i.imgur.com/BrNrxRt.gif",
+        "urlToImage": "http://whatsupnewp.com/wp-content/uploads/2016/06/maxresdefault-768x432.jpg",
         "publishedAt": "2018-12-29T00:24:21Z",
         "content": "STORY WRITTEN FOR CBS NEWS &amp; USED WITH PERMISSION Artist’s concept of the New Horizons spacecraft approaching a Kuiper Belt Object. Credit: NASA/JHUAPL/SWRI Three years and a billion miles past Pluto, NASA’s New Horizons probe is on the verge of at least … [+12723 chars]"
     },
@@ -254,7 +254,7 @@ const dummyData = {
         },
         "author": "Jamie Ehrlich, CNN",
         "title": "Maine governor deems congressional election 'stolen' while certifying result - CNN",
-        "description": "Gov. Paul LePage certified the election results for Maine's 2nd Congressional District after a recount and legal battle dragged out the final result in the race for almost two months, cementing a Democratic victory.",
+        "description": null,
         "url": "https://www.cnn.com/2018/12/28/politics/maine-governor-certifies-congressional-election/index.html",
         "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/161011104302-maine-gov-paul-lepage-super-tease.jpg",
         "publishedAt": "2018-12-28T20:36:00Z",
