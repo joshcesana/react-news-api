@@ -59,7 +59,6 @@ export function fetchSaves() {
 }
 
 export function addSave(save) {
-  debugger;
   return (dispatch) => {
     dispatch({ type: 'LOADING_SAVE' });
     axios.post('/api/v1/saves', {
@@ -69,8 +68,16 @@ export function addSave(save) {
     	description: save.description,
     	url: save.url,
     	urlToImage: save.urlToImage,
-    	publishedAt: save.publishedAt,
+    	publishedAt: save.publishedAt
     })
     .then(save => dispatch({ type: 'ADD_SAVE', save }))
+  }
+}
+
+export function deleteSave(id) {
+  return (dispatch) => {
+    dispatch({ type: 'LOADING_SAVE' });
+    axios.delete(`/api/v1/saves/${id}`)
+      .then(save => dispatch({ type: 'DELETE_SAVE', save }))
   }
 }
